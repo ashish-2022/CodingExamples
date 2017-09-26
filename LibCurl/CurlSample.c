@@ -43,7 +43,7 @@ int main(void)
     struct string s;
     init_string(&s);
 
-    curl_easy_setopt(curl, CURLOPT_URL, "https://192.168.5.70/api/v2/system/state");
+    curl_easy_setopt(curl, CURLOPT_URL, "https://192.xxx.x.xx/api/v2/system/state");
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writefunc);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &s);
     curl_easy_setopt(curl, CURLOPT_USERPWD, "root:password");

@@ -1,0 +1,52 @@
+ashish@HP-Pavilion:~/My_SandBox/CPP$ gdb BitwiseOperators.o
+GNU gdb (Ubuntu 7.11.1-0ubuntu1~16.04) 7.11.1
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from BitwiseOperators.o...done.
+(gdb) break 14
+Breakpoint 1 at 0x4008dd: file BitwiseOperators.cpp, line 14.
+(gdb) run
+Starting program: /home/ashish/My_SandBox/CPP/BitwiseOperators.o 
+
+Binary System: 2^8=512, 2^7=128, 2^6=64, 2^5=32, 2^4=16, 2^3=8, 2^2=4, 2^1=2, 2^0=1
+Line 1 - Value of c is : 12
+
+Breakpoint 1, main () at BitwiseOperators.cpp:14
+14         c = a | b;             // 61 = 0011 1101
+(gdb) p a
+$1 = 60
+(gdb) p b
+$2 = 13
+(gdb) p c
+$3 = 12
+(gdb) n
+15         cout << "Line 2 - Value of c is: " << c << endl ;
+(gdb) p c
+$4 = 61
+(gdb) n
+Line 2 - Value of c is: 61
+17         c = a ^ b;             // 49 = 0011 0001
+(gdb) p a
+$5 = 60
+(gdb) p b
+$6 = 13
+(gdb) c
+Continuing.
+Line 3 - Value of c is: 49
+Line 4 - Value of c is: -61
+Line 5 - Value of c is: 240
+Line 6 - Value of c is: 15
+[Inferior 1 (process 4758) exited normally]
+(gdb) q
+

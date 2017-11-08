@@ -2,7 +2,33 @@ CPPFLAGS=-g -fpic
 OUTDIR=bin/
 SRCDIR=src/
 
-all: 2D_ARAY 2DArray BaseDerived ClassMembers ConstPtr ExampleSampleC ExampleSample IntArrayLength Isomorphic LinkedList MergeArraysAO StringPermutations StringClass BitwiseOperators OpenWebURL MallocExample BST
+BUILD_TARGETS=2D_ARAY\
+	 2DArray\
+	 BaseDerived\
+	 ClassMembers\
+	 ConstPtr\
+	 ExampleSampleC\
+	 ExampleSample\
+	 IntArrayLength\
+	 Isomorphic\
+	 LinkedList\
+	 MergeArraysAO\
+	 StringPermutations\
+	 StringClass\
+	 BitwiseOperators\
+	 OpenWebURL\
+	 MallocExample\
+	 BST\
+	 EmptyClass\
+	 GetEnvVars\
+	 UnixCmdPreCPP11\
+	 UnixCmd\
+	 StructFromClass\
+	 MemoryHeap\
+	 ForkRunCmd\
+	 DataTypes
+
+all: $(BUILD_TARGETS)
 
 clean:
 	rm ${OUTDIR}*.o
@@ -58,6 +84,33 @@ MergeArraysAO:
 StringPermutations:
 	g++ $(CPPFLAGS) ${SRCDIR}StringPermutations.cpp -o ${OUTDIR}StringPermutations.o
 
+EmptyClass:
+	g++ $(CPPFLAGS) ${SRCDIR}EmptyClass.cpp -o ${OUTDIR}EmptyClass.o
+
 MallocExample:
 	cc ${SRCDIR}MallocExample.c -o ${OUTDIR}MallocExample.o
+
+GetEnvVars:
+	g++ $(CPPFLAGS) ${SRCDIR}GetEnvVars.cpp -o ${OUTDIR}GetEnvVars.o
+
+UnixCmdPreCPP11:
+	g++ $(CPPFLAGS) ${SRCDIR}UnixCmdPreCPP11.cpp -o ${OUTDIR}UnixCmdPreCPP11.o
+
+UnixCmd:
+	g++ $(CPPFLAGS) -std=c++0x ${SRCDIR}UnixCmd.cpp -o ${OUTDIR}UnixCmd.o
+
+StructFromClass:
+	g++ $(CPPFLAGS) ${SRCDIR}StructFromClass.cpp -o ${OUTDIR}StructFromClass.o
+
+RunUnixCmd:
+	-g++ $(CPPFLAGS) -std=c++0x ${SRCDIR}RunUnixCmd.cpp -o ${OUTDIR}RunUnixCmd.o
+
+MemoryHeap:
+	g++ $(CPPFLAGS) ${SRCDIR}MemoryHeap.cpp -o ${OUTDIR}MemoryHeap.o
+
+ForkRunCmd:
+	g++ $(CPPFLAGS) ${SRCDIR}ForkRunCmd.cpp -o ${OUTDIR}ForkRunCmd.o
+
+DataTypes:
+	g++ $(CPPFLAGS) ${SRCDIR}DataTypes.cpp -o ${OUTDIR}DataTypes.o
 

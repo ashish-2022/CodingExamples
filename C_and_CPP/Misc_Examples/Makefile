@@ -26,7 +26,8 @@ BUILD_TARGETS=2D_ARAY\
 	 StructFromClass\
 	 MemoryHeap\
 	 ForkRunCmd\
-	 DataTypes
+	 DataTypes\
+	 Read_line_cin
 
 all: $(BUILD_TARGETS)
 
@@ -113,4 +114,7 @@ ForkRunCmd:
 
 DataTypes:
 	g++ $(CPPFLAGS) ${SRCDIR}DataTypes.cpp -o ${OUTDIR}DataTypes.o
+
+Read_line_cin:
+	g++ $(CPPFLAGS) ${SRCDIR}Read_line_cin.cpp -o ${OUTDIR}Read_line_cin.o
 

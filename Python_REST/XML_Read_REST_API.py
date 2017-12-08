@@ -21,7 +21,7 @@ import xmltodict
 import socket
 
 # Host and Port for service 
-appHost='192.168.5.102'
+appHost='192.168.x.xxx'
 appPort=5002
 # Port status
 portBusy=0

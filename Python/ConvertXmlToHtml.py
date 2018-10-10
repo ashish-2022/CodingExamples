@@ -4,7 +4,7 @@ from json2html import *
 import xmltodict;
 import json;
 
-file = open("Hstatus.xml", "rb");
+file = open("MyXmlFile.xml", "rb");
 
 #print(file.readlines());
 

@@ -1,0 +1,21 @@
+
+Runing Server:
+
+[ashirodkar@machine1 PythonREST_Example]$ python XML_Read_REST_Api.py
+ * Serving Flask app "XML_Read_REST_Api" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://IP.xx.xx.xxx:5002/ (Press CTRL+C to quit)
+IP.of.caller.xx - - [16/Dec/2018 23:28:51] "GET /readxml HTTP/1.1" 200 -
+
+
+Client:
+
+Run command:
+[ashirodkar@machine2 ~]$ curl http://IP.xx.xx.xxx:5002/readxml
+
+From browser:
+http:///IP.xx.xx.xxx:5002/readxml
+
